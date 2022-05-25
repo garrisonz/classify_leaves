@@ -32,8 +32,14 @@
 
 - 框架：PyTorch
 
-
-
 竞赛：[Classify Leaves | Kaggle](https://www.kaggle.com/c/classify-leaves)
 
 参考：[simple resnet baseline | Kaggle](https://www.kaggle.com/code/nekokiku/simple-resnet-baseline)
+
+### 坑
+
+- resnet18 + weight decay 的训练速度很慢
+  
+  > train acc 85% 左右，就很慢了，20 epochs ，train acc 只提升 2 各点，比没有 weight decay 的 resnet18 的提升慢很多
+  > 
+  > 分析：resnet18 本身的训练精度可达到 99%，所以模型容量是够大的。应该是 weight decay 限制了 w 的取值范围，导致 resnet18 的模型容量变得不够大，则训练集的精度提升就很慢了
