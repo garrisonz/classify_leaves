@@ -30,4 +30,3 @@
 
 参考：[simple resnet baseline | Kaggle](https://www.kaggle.com/code/nekokiku/simple-resnet-baseline)
 
-1
